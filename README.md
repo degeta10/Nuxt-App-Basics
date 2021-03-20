@@ -1,4 +1,4 @@
-# learning
+# Nuxt App Basics
 
 ## Build Setup
 
