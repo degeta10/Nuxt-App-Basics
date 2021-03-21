@@ -6,6 +6,9 @@
         <div class="row p-2 border border-primary">
           <Card v-for="(post, index) in posts" :key="index" :post="post" />
         </div>
+        <button class="btn btn-default" v-scroll-to="'body'">
+          Back to Top
+        </button>
       </div>
     </div>
   </div>
