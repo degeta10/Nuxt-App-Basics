@@ -13,18 +13,22 @@
 <script>
 import axios from "axios";
 import Card from "@/components/Card";
+import { mapGetters } from "vuex";
+
 export default {
   components: { Card },
-  data() {
-    return {
-      posts: "",
-    };
+  computed: {
+    ...mapGetters(["posts"]),
+    // posts() {
+    //   return this.$store.getters.posts;
+    // },
   },
-  async asyncData() {
+  async asyncData({ store }) {
     let response = await axios.get(
       "https://jsonplaceholder.typicode.com/posts"
     );
-    return { posts: response.data };
+    store.dispatch("setPosts", response.data);
+    // return { posts: response.data };
   },
   head: {
     title: "Posts",
