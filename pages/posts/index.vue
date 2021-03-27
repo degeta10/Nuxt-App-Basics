@@ -26,13 +26,13 @@ export default {
     //   return this.$store.getters.posts;
     // },
   },
-  async asyncData({ store }) {
-    let response = await axios.get(
-      "https://jsonplaceholder.typicode.com/posts"
-    );
-    store.dispatch("setPosts", response.data);
-    // return { posts: response.data };
-  },
+  // async asyncData({ store }) {
+  //   let response = await axios.get(
+  //     "https://jsonplaceholder.typicode.com/posts"
+  //   );
+  //   store.dispatch("setPosts", response.data);
+  //   // return { posts: response.data };
+  // },
   head: {
     title: "Posts",
   },
